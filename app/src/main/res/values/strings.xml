@@ -4,6 +4,7 @@
     <string name="voltar">Voltar</string>
     <string name="dia">Dia</string>
     <string name="mes">Mês</string>
+    <string name="hoje">Hoje</string>
 
     <string-array name="dias">
         <item>1</item>

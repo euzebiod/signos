@@ -7,40 +7,40 @@ public class InterpretadorSigno {
     private ArrayList<Signo> signos = new ArrayList<Signo>();
 
     public InterpretadorSigno(){
-        Signo Aquario = new Signo(20,1,18,2,"Aquário","@drawable/aquario");
+        Signo Aquario = new Signo(20,1,18,2,"Aquário","@drawable/aquario","aquario");
         signos.add(Aquario);
 
-        Signo Peixes = new Signo(19,2,20,3,"Peixes","@drawable/peixes");
+        Signo Peixes = new Signo(19,2,20,3,"Peixes","@drawable/peixes","peixes");
         signos.add(Peixes);
 
-        Signo Aries = new Signo(21,3,19,4,"Aries","@drawable/aries");
+        Signo Aries = new Signo(21,3,19,4,"Aries","@drawable/aries","aries");
         signos.add(Aries);
 
-        Signo Touro = new Signo(20,4,20,5,"Touro","@drawable/touro");
+        Signo Touro = new Signo(20,4,20,5,"Touro","@drawable/touro", "touro");
         signos.add(Touro);
 
-        Signo Gemeos = new Signo(21,5,20,6,"Gêmeos","@drawable/gemeos");
+        Signo Gemeos = new Signo(21,5,20,6,"Gêmeos","@drawable/gemeos","gemeos");
         signos.add(Gemeos);
 
-        Signo Cancer = new Signo(21,6,22,7,"Câncer","@drawable/cancer");
+        Signo Cancer = new Signo(21,6,22,7,"Câncer","@drawable/cancer","cancer");
         signos.add(Cancer);
 
-        Signo Leao = new Signo(23,7,22,8,"Leão","@drawable/leao");
+        Signo Leao = new Signo(23,7,22,8,"Leão","@drawable/leao", "leao");
         signos.add(Leao);
 
-        Signo Virgem = new Signo(23,8,22,9,"Virgem","@drawable/virgem");
+        Signo Virgem = new Signo(23,8,22,9,"Virgem","@drawable/virgem", "virgem");
         signos.add(Virgem);
 
-        Signo Libra = new Signo(23,9,22,10,"Libra","@drawable/libra");
+        Signo Libra = new Signo(23,9,22,10,"Libra","@drawable/libra", "libra");
         signos.add(Libra);
 
-        Signo Escorpiao = new Signo(23,10,21,11,"Escorpião","@drawable/escorpiao");
+        Signo Escorpiao = new Signo(23,10,21,11,"Escorpião","@drawable/escorpiao","escorpiao");
         signos.add(Escorpiao);
 
-        Signo Sagitario = new Signo(22,11,21,12,"Sagitário","@drawable/sagitario");
+        Signo Sagitario = new Signo(22,11,21,12,"Sagitário","@drawable/sagitario","sagitario");
         signos.add(Sagitario);
 
-        Signo Capricornio = new Signo(22,12,19,1,"Capricórnio","@drawable/capricornio");
+        Signo Capricornio = new Signo(22,12,19,1,"Capricórnio","@drawable/capricornio","capricornio");
         signos.add(Capricornio);
     }
     public Signo interpretar(int dia, int mes) {

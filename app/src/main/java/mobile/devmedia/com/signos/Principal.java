@@ -1,13 +1,15 @@
 package mobile.devmedia.com.signos;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.StrictMode;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class Principal extends AppCompatActivity {
     private Spinner spinnerDia = null;
@@ -33,6 +35,9 @@ public class Principal extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
+
+        StrictMode.ThreadPolicy policy = new   StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
 
         spinnerDia = (Spinner) findViewById(R.id.spinnerDia);
         spinnerMes = (Spinner) findViewById(R.id.spinnerMes);
@@ -83,6 +88,10 @@ public class Principal extends AppCompatActivity {
                 InterpretadorSigno Interpretador = new InterpretadorSigno();
 
                 Signo signoResultado = Interpretador.interpretar(posicaoDia, posicaoMes);
+
+                if(signoResultado.setPrevisao() == false){
+                    Toast.makeText(getApplicationContext(), "Não foi possível conectar. Cheque a internet e tente novamente.", Toast.LENGTH_LONG).show();
+                }
 
                 Bundle args = new Bundle();
                 args.putSerializable("resultado", signoResultado);
